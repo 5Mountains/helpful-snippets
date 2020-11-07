@@ -41,7 +41,18 @@ Semantic highlights:
 
 <big>Some text</big>
 
+<mark>Some text</mark>
+
 <del>Some text</del>
 
 <ins>Some text</ins>
+```
+Some 'status bars':
+```
+<label for="download">Downloading progress:</label>
+<progress id="download" value="32" max="100"></progress>
+```
+```
+<label for="fuel">Fuel level:</label>
+<meter id="fuel" value="2" min="0" max="10">2 out of 10</meter><br>
 ```
