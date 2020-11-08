@@ -76,3 +76,12 @@ or, into **hexadecimal**:
 ```const hex = num.toString(16);```
 
 but, the result will be **```string```** and in order to convert it into a number (if it needs), there are several options: ```Number()```, ```parseInt()``` or just put  before result **```+```**.
+
+How to join 2 arrays into 1 array:
+```
+const num1 = [1, 2, 3, 4];
+const num2 = [5, 6, 7, 8];
+const allNum1 = num1.concat(num2);
+const allNum2 = [...num1,...num2];
+```
+result for both will be [1, 2, 3, 4, 5, 6, 7, 8];
