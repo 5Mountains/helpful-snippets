@@ -1,15 +1,19 @@
 ## Helpful Snippets
 
-This repository contains useful snippets of `html`, `css` and `js` to help refresh memory (:
+This repository contains useful hints, snippets of ```html```, ```css``` and ```js``` to help refresh memory (:
+
+### HTML
+
+***
 
 text semantics:
 ```
 <q>Some important text</q>
 <address>Who said</address>
 ```
-`<blockquote>Some text</blockquote>`
+```<blockquote>Some text</blockquote>```
 
-`<time datetime="01.01.2020">My Birthday</time>`
+```<time datetime="01.01.2020">My Birthday</time>```
 ```
 <pre>
   <code>
@@ -56,3 +60,19 @@ Some 'status bars':
 <label for="fuel">Fuel level:</label>
 <meter id="fuel" value="2" min="0" max="10">2 out of 10</meter><br>
 ```
+### JS
+
+***
+
+Converting decimal number ```const num = 1```,
+
+into **binary**:
+```const bin = num.toString(2);```
+
+or, into **octal**:
+```const oct = num.toString(8);```
+
+or, into **hexadecimal**:
+```const hex = num.toString(16);```
+
+but, the result will be **```string```** and in order to convert it into a number (if it needs), there are several options: ```Number()```, ```parseInt()``` or just put  before result **```+```**.
