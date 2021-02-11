@@ -85,3 +85,32 @@ const allNum1 = num1.concat(num2);
 const allNum2 = [...num1,...num2];
 ```
 result for both will be [1, 2, 3, 4, 5, 6, 7, 8];
+
+***
+
+#### TypeScript
+
+all these consts can be sign only to their set type, in other case will be error;
+
+boolean:
+`const isCompleted: boolean = true | false;`
+string:
+``const isString: string = 'word' | `There is some ${word}`;``
+numbers:
+`const isNull: number = 5;`
+`const decimal: number = 5.25;`
+`const hex: number = 0xf00d;`
+`const binary: number = 0b1010;`
+`const octal: number = 0o744;`
+null
+`const isNull: null = null;`
+undefined
+`const isUndefined: undefined = undefined;`
+
+<br>
+
+the data type is numbers and they will be in array
+`const numbersArray: number[] = [1, 2, 3, 4, 5];`
+
+Via keyword Array we set data type and after by keyword number we describe data.
+`const numbersArray: Array<number> = [1, 2, 3, 4, 5];`
