@@ -88,29 +88,112 @@ result for both will be [1, 2, 3, 4, 5, 6, 7, 8];
 
 ***
 
-#### TypeScript
+### TypeScript
 
+##### Basics
 all these consts can be sign only to their set type, in other case will be error;
 
-boolean:
+- boolean:
+
 `const isCompleted: boolean = true | false;`
-string:
+
+- string:
+
 ``const isString: string = 'word' | `There is some ${word}`;``
-numbers:
-`const isNull: number = 5;`
-`const decimal: number = 5.25;`
-`const hex: number = 0xf00d;`
-`const binary: number = 0b1010;`
-`const octal: number = 0o744;`
-null
+
+- numbers:
+
+```
+const isNull: number = 5;
+const decimal: number = 5.25;
+const hex: number = 0xf00d;
+const binary: number = 0b1010;
+const octal: number = 0o744;
+```
+
+- null
+
 `const isNull: null = null;`
-undefined
+
+- undefined
+
 `const isUndefined: undefined = undefined;`
 
 <br>
 
-the data type is numbers and they will be in array
-`const numbersArray: number[] = [1, 2, 3, 4, 5];`
+- Array of numbers/strings - the data type is numbers or string and they will be in array
 
-Via keyword Array we set data type and after by keyword number we describe data.
-`const numbersArray: Array<number> = [1, 2, 3, 4, 5];`
+`const numbersArray: number[] or string[] = [1, 2, 3, 4, 5];`
+
+- Generic type - via keyword Array we set data type and after by keyword number or string we describe data.
+
+`const numbersArray: Array<number> or Array<string> = [1, 2, 3, 4, 5];`
+
+- Tuple type - inside array we define future different data types and then assign the array into a variable.
+
+```
+let x: [string, number];
+x = ['hey', 55];
+
+or
+
+let y: [string, number] = ['buy', 10];
+```
+
+- Any type - for dynamically generated data or when the data can be changed, but this checking is unreliable...
+
+```
+let x: [any, any] = ['buy', 10];
+let y: Array<any> = [10, 'buy'];
+let anyone: any = false;
+anyone = 10;
+anyone = 'hello';
+```
+
+Type - custom way of setting data.   
+
+```
+type ID = string | number;
+
+const stringId: ID = "1234";
+const numberId: ID = 1234;
+```
+
+Enum Type - 
+Object Type -
+
+
+
+##### Functions
+- Void - the describing data type which mean that function doesn't have return statement.
+```
+function sayHello(name: string): void {
+  alert(`Hello dear Sir or Madam ${name}`);
+  console.log(`Hello dear Sir or Madam ${name}`);
+}
+```
+- Never - the describing data type which mean that function return Error or function never end.
+
+```
+function sayHello(message: string): never {
+  throw new Error(message);
+}
+
+function infinity(): never {
+  while(true) {
+    console.log('Greetings')
+  }
+}
+```
+
+- interfaces - 
+
+```
+interface Person {
+  readonly id: number,
+  color?: string,
+  size: {
+    width
+  }
+}
+```
